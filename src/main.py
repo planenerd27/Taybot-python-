@@ -19,9 +19,7 @@ class Taybot(commands.Bot):
                         f"modules.{cmd_group}.{cmd_name}.cog"
                     )
 
-                    await self.tree.sync(
-                        guild=discord.Object(id=892205260637081620)
-                    )
+                    await self.tree.sync()
 
                     print(f"modules.{cmd_group}.{cmd_name}.cog loaded")
 
