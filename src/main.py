@@ -26,8 +26,8 @@ class Taybot(commands.Bot):
 def main():
     bot = Taybot(
         command_prefix=' ',
-        activity=discord.Streaming(
-            name="hentai",
+        activity=discord.Playing(
+            name="with Cedar's pp",
             url="https://www.twitch.tv/e"
         ),
         intents=discord.Intents.all(),
