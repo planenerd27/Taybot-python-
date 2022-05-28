@@ -5,12 +5,12 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 class Taybot(commands.Bot):
-    def init(self, args, **kwargs):
-        super().init(args, **kwargs)
-
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+    
     async def on_ready(self):
         print(f"{self.user.name} connected to Discord")
-
+    
     async def setup_hook(self):
         for cmd_group in os.listdir("src/modules"):
             for cmd_name in os.listdir(f"src/modules/{cmd_group}"):
